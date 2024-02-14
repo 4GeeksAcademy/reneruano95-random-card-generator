@@ -1,1 +1,57 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: gray;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-weight: bold;
+
+  &:before {
+    align-self: flex-start;
+    margin-left: 10px;
+  }
+  &:after {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+    font-size: 80px;
+  }
+
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+    font-size: 80px;
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+    font-size: 80px;
+  }
+
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+    font-size: 80px;
+  }
+}

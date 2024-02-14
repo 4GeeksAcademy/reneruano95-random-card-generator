@@ -10,11 +10,11 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 
   // Array for suits
-  const SUITS = ["Hearts", "Spades", "Clubs", "Diamonds"];
+  const suits = ["spade", "club", "heart", "diamond"];
 
   // Array for card values
-  const CARD_VALUES = [
-    "Ace",
+  const values = [
+    "A",
     "2",
     "3",
     "4",
@@ -24,30 +24,22 @@ window.onload = function() {
     "8",
     "9",
     "10",
-    "Jack",
-    "Queen",
-    "King"
+    "J",
+    "Q",
+    "K"
   ];
 
-  // Function to generate random suit
-  const getRandomSuit = () => {
-    return SUITS[Math.floor(Math.random() * SUITS.length)];
+  const generateRandomSuit = () => {
+    const randomSuitIndex = Math.floor(Math.random() * suits.length);
+    return suits[randomSuitIndex];
   };
 
-  // Function to generate random card value
-  const getRandomValue = () => {
-    return CARD_VALUES[Math.floor(Math.random() * CARD_VALUES.length)];
+  const generateRandomNumber = () => {
+    const randomValueIndex = Math.floor(Math.random() * values.length);
+    return values[randomValueIndex];
   };
 
-  // Function to generate a random card
-  const generateRandomCard = () => {
-    const suit = getRandomSuit();
-    const value = getRandomValue();
+  document.querySelector(".card").classList.add(generateRandomSuit());
 
-    return { suit, value };
-  };
-
-  // Generate and log a random card
-  const card = generateRandomCard();
-  console.log(`New random card: ${card.value} of ${card.suit}`);
+  document.querySelector(".card").innerHTML = generateRandomNumber();
 };
