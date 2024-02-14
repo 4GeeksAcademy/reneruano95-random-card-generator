@@ -17,8 +17,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
-  font-weight: bold;
+  font-size: 120px;
+  /* font-weight: bold; */
 
   &:before {
     align-self: flex-start;
