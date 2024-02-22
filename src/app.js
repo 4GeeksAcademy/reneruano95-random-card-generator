@@ -64,7 +64,7 @@ window.onload = function() {
   // Start/stop timer function
   const startStopTimer = () => {
     if (timerStatus === "stopped") {
-      timer = setInterval(updateCard, 2000);
+      timer = setInterval(updateCard, 2000); //2s
       timerStatus = "started";
       document.querySelector("#start-stop-timer").innerText = "Stop Timer";
     } else {

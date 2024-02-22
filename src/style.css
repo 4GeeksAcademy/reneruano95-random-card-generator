@@ -27,6 +27,7 @@ body {
   &:after {
     align-self: flex-end;
     margin-right: 10px;
+    transform: rotate(180deg);
   }
 
   &.spade:before,
